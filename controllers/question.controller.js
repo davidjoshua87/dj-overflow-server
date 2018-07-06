@@ -6,9 +6,11 @@ module.exports = {
   getAll: function (req, res) {
     Question.find()
       .populate('answer')
+      .populate('User')
       .sort('-createdAt')
       .exec()
       .then(response => {
+        console.log(response,'====>>>ini response')
         res.status(200).json({
           message: 'Question list retrieved successfully',
           response
