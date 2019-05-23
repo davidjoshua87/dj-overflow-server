@@ -1,5 +1,5 @@
-const express = require('express')
-const answers = express.Router()
+const express          = require('express')
+const answers          = express.Router()
 const answerController = require('../controllers/answer.controller')
 const { authenticate } = require('../middleware/auth')
 

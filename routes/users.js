@@ -1,7 +1,9 @@
-const express = require('express')
-const users = express.Router()
+const express        = require('express')
+const users          = express.Router()
 const userController = require('../controllers/user.controller')
-const { authenticate } = require('../middleware/auth')
+const {
+    authenticate
+} = require('../middleware/auth')
 
 users.get('/', userController.getAll)
 users.post('/', userController.create)
